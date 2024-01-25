@@ -46,29 +46,23 @@ def clear_result_label():
     submit_button.config(state="normal")
     user_input.set("")
 
-# Create the main window
 root = Tk()
 root.title("Rock, Paper, Scissors Game")
 
-# User input
 user_input = StringVar()
 user_label = Label(root, text="Enter your choice (Rock, Paper, or Scissors):")
 user_label.pack()
 user_entry = Entry(root, textvariable=user_input)
 user_entry.pack()
 
-# Button to submit user's choice
 submit_button = Button(root, text="Submit", command=get_user_choice)
 submit_button.pack()
 
-# Button to clear result label and enable input
 clear_button = Button(root, text="Play Again", command=clear_result_label)
 clear_button.pack()
 
-# Display result
 result_var = StringVar()
 result_label = Label(root, textvariable=result_var, font=("Helvetica", 12))
 result_label.pack()
 
-# Start the GUI event loop
 root.mainloop()
